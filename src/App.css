@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Namdhinggo:wght@400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap');
+@import "@flaticon/flaticon-uicons/css/all/all";
+
+.namdhinggo-medium {
+  font-family: "Namdhinggo", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.namdhinggo-bold {
+  font-family: "Namdhinggo", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.namdhinggo-extrabold {
+  font-family: "Namdhinggo", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Inter Font */
+.inter-light {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inter-regular {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-medium {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.inter-semibold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.inter-bold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+.clip-left {
+  clip-path: polygon(0% 100%, 100% 90%, 100% 20%, 0% 8%);
+}
+
+.clip-right {
+  clip-path: polygon(0% 90%, 100% 100%, 100% 8%, 0% 20%);
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes moveXY {
+  0% {
+    transform: translateY(70px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateY(70px);
+  }
+}
+
+.animate-moveXY {
+  animation: moveXY 7s ease-in-out infinite;
+}
+
+@keyframes moveCrossFixed {
+  from {
+    transform: translate(4, 4);
+  }
+  to {
+    transform: translate(15px, -15px); /* right 4px, up 4px */
+  }
+}
+
+.animate-moveCrossFixed {
+  animation: moveCrossFixed 0.5s ease-out forwards;
+}
