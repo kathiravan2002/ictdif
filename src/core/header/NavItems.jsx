@@ -11,6 +11,7 @@ const NavItems = ({ ToggleMenu, MenuOpen, isActive, }) => {
   const dropdown2Ref = useRef(null);
   const [dropdown1, setDropdown1] = useState(false);
   const [dropdown2, setDropdown2] = useState(false);
+  const [subDropdown, setSubDropdown] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -29,12 +30,44 @@ const NavItems = ({ ToggleMenu, MenuOpen, isActive, }) => {
   }, []);
 
 
+   useEffect(() => {
+        if (!dropdown1) setSubDropdown(false);
+    }, [dropdown1]);
+
+
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+    useEffect(() => {
+        if (location.hash) {
+            const id = location.hash.replace("#", "");
+            scrollToSection(id);
+        }
+    }, [location]);
+
+    const toggleSubDropdown = (index) => {
+        setSubDropdown((prev) => ({
+            ...prev,
+            [index]: !prev[index],
+        }));
+    };
+
   const about = [
     { name: "About the Conference", path: "/about" },
     { name: "Scope of Conference", path: "/scope" },
-    { name: "Organizing Committee", path: "/organizing-committee" },
-    { name: "Editorial Board", path: "/editorial-board" },
-
+    // { name: "Organizing Committee", path: "/organizing-committee" },
+    {
+      name: "Editorial Board",
+      children: [
+        { name: "Organizing Committee", id: "organizing-committee", path: "/editorial-board" },
+        { name: "Technical Committee", id: "technical-committee", path: "/editorial-board" },
+        { name: "Advisory Committee", id: "advisory-committee", path: "/editorial-board" },
+      ]
+    }
   ];
   const author = [
     { name: "Conference Tracks", path: "/conference-tracks" },
@@ -68,7 +101,7 @@ const NavItems = ({ ToggleMenu, MenuOpen, isActive, }) => {
 
             <li ref={dropdown1Ref} >
               <Link onClick={() => setDropdown1(!dropdown1)} className={`flex items-center gap-1  ${about.some(link => location.pathname === link.path)
-                ? 'text-white bg-[#FF521C]  py-1 px-1 rounded-lg'
+                ? 'text-white bg-white  py-1 px-1 rounded-lg'
                 : ''
                 }`}>
                 About Us
@@ -84,24 +117,60 @@ const NavItems = ({ ToggleMenu, MenuOpen, isActive, }) => {
                       const isActive = location.pathname === link.path;
 
                       return (
-                        <Link
-                          key={index}
-                          to={link.path}
-                          onClick={() => {
-                            setDropdown1(false);
-                            ToggleMenu(false);
-                          }}
-                          className="block"
-                        >
-                          <li
-                            className={`px-4 py-2 rounded-md transition cursor-pointer ${isActive
-                              ? 'text-white bg-[#FF521C]  '
-                              : ''
-                              }`}
-                          >
-                            {link.name}
-                          </li>
-                        </Link>
+                        <li key={index} className="relative">
+                          {link.children ? (
+                            <>
+                              <button
+                                onClick={() => toggleSubDropdown(index)}
+                                className="w-full flex justify-between items-center px-4 py-1.5 rounded-md cursor-pointer"
+                              >
+                                {link.name}
+                                <FaChevronDown
+                                  className={`${subDropdown[index] ? "rotate-180" : "rotate-0"} text-xs`}
+                                />
+                              </button>
+
+                              {subDropdown[index] && (
+                                <ul className="ml-4 mt-1 border rounded-lg border-gray-400 pl-2">
+                                  {link.children.map((sub, subIndex) => {
+                                    const subPathWithHash = `${sub.path}#${sub.id}`;
+                                    const isSubActive = location.pathname + location.hash === subPathWithHash;
+
+                                    return (
+                                      <li key={subIndex}>
+                                        <Link
+                                          to={subPathWithHash}
+                                          onClick={() => {
+                                            scrollToSection(sub.id);
+                                            setDropdown1(false);
+                                            toggleSubDropdown(index);
+                                            ToggleMenu(false);
+
+                                          }}
+                                          className={`block px-4 py-1.5 rounded-md cursor-pointer ${isSubActive ? "" : ""
+                                            }`}
+                                        >
+                                          {sub.name}
+                                        </Link>
+                                      </li>
+                                    );
+                                  })}
+                                </ul>
+                              )}
+                            </>
+                          ) : (
+                            <Link
+                              to={link.path}
+                              onClick={() => {
+                                setDropdown1(false);
+                                setSubDropdown(false);
+                              }}
+                              className={`block px-4 py-1.5 rounded-md cursor-pointer ${isActive ? "" : ""}`}
+                            >
+                              {link.name}
+                            </Link>
+                          )}
+                        </li>
                       );
                     })}
                   </ul>
@@ -175,7 +244,7 @@ const NavItems = ({ ToggleMenu, MenuOpen, isActive, }) => {
           </div>
         </a>
 
-       
+
       </nav>
     </>
   );

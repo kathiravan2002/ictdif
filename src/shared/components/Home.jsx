@@ -1,8 +1,22 @@
 import { TbCircleArrowRightFilled } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Marquee from "react-fast-marquee";
 
 export default function Home({ data }) {
+  const imageItems = [
+    { src: '/assets/images/associates/1.png', },
+    { src: '/assets/images/associates/2.jpg', },
+    { src: '/assets/images/associates/3.jpg', },
+    { src: '/assets/images/associates/4.jpg', },
+    { src: '/assets/images/associates/5.jpg', },
+    { src: '/assets/images/associates/6.jpg', },
+    { src: "/assets/images/associates/scopus.png", },
+    { src: "/assets/images/associates/8.jpg", },
+    { src: "/assets/images/associates/9.jpg", },
+    { src: "/assets/images/associates/10.jpg", },
+    { src: "/assets/images/associates/11.jpg", },
+  ];
 
   return (
     <>
@@ -31,9 +45,9 @@ export default function Home({ data }) {
               <div className="flex justify-center items-center relative">
                 <motion.div
                   className="absolute bg-[#FFD900] w-[300px] h-[300px] md:h-[500px] md:w-[500px] lg:h-[550px] lg:w-[550px] xl:h-[550px] xl:w-[550px] 2xl:h-[625px] 2xl:w-[625px] rounded-full"
-                  initial={{ x: 0, y: 50, opacity: 0 }}   
-                  animate={{ x: 25, y: -30, opacity: 1 }}   
-                  transition={{ duration: 1, delay:0.3, ease: "easeInOut" }}
+                  initial={{ x: 0, y: 50, opacity: 0 }}
+                  animate={{ x: 25, y: -30, opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
                 />
 
                 <motion.img
@@ -62,20 +76,20 @@ export default function Home({ data }) {
               </div> */}<div className="flex justify-center items-center relative  mt-16">
                 <motion.div
                   className="absolute bg-[#FFD900] w-[300px] h-[300px] md:h-[500px] md:w-[500px] lg:h-[550px] lg:w-[550px] xl:h-[550px] xl:w-[550px] 2xl:h-[525px] 2xl:w-[525px] rounded-full"
-                  initial={{ x: 0, y: 50, opacity: 0 }}   
-                  whileInView={{ x: -25, y: -25, opacity: 1 }} 
-                  transition={{ duration: 1, delay:0.3, ease: "easeInOut" }}
-                  // viewport={{ once: true, amount: 0.3 }} 
+                  initial={{ x: 0, y: 50, opacity: 0 }}
+                  whileInView={{ x: -25, y: -25, opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
+                // viewport={{ once: true, amount: 0.3 }} 
                 />
 
                 <motion.img
                   src="/assets/images/about.png"
                   alt="scope.jpg"
                   className="rounded-full w-[300px] h-[300px] md:h-[500px] md:w-[500px] lg:h-[550px] lg:w-[550px] xl:h-[550px] xl:w-[550px] 2xl:h-[525px] 2xl:w-[525px] object-cover relative z-40"
-                  initial={{ x: 0, y: 70, opacity: 0 }} 
-                  whileInView={{ x: 0, y: 0, opacity: 1 }} 
+                  initial={{ x: 0, y: 70, opacity: 0 }}
+                  whileInView={{ x: 0, y: 0, opacity: 1 }}
                   transition={{ duration: 1, ease: "easeOut" }}
-                  // viewport={{ once: true, amount: 0.3 }} 
+                // viewport={{ once: true, amount: 0.3 }} 
                 />
               </div>
 
@@ -114,7 +128,7 @@ export default function Home({ data }) {
                     <p className="md:text-lg text-base text-[#FFD900] inter-medium"><i className="fi fi-sr-hand-back-point-right text-white mr-3"></i>Support sustainable and inclusive development</p>
                     <p className="md:text-lg text-base text-[#FFD900] inter-medium"><i className="fi fi-sr-hand-back-point-right text-white mr-3"></i>Bridge academia, industry, and policy sectors</p>
                   </div>
-               
+
                 </div>
               </div>
 
@@ -125,20 +139,20 @@ export default function Home({ data }) {
               <div className="flex justify-center items-center relative  mt-16">
                 <motion.div
                   className="absolute bg-[#FFD900] w-[300px] h-[300px] md:h-[500px] md:w-[500px] lg:h-[550px] lg:w-[550px] xl:h-[550px] xl:w-[550px] 2xl:h-[525px] 2xl:w-[525px] rounded-full"
-                  initial={{ x: 0, y: 50, opacity: 0 }}   
-                  whileInView={{ x: 25, y: -25, opacity: 1 }} 
-                  transition={{ duration: 1, delay:0.3, ease: "easeInOut" }}
-                  // viewport={{ once: true, amount: 0.3 }} 
+                  initial={{ x: 0, y: 50, opacity: 0 }}
+                  whileInView={{ x: 25, y: -25, opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
+                // viewport={{ once: true, amount: 0.3 }} 
                 />
 
                 <motion.img
                   src="/assets/images/scope.jpg"
                   alt="scope.jpg"
                   className="rounded-full w-[300px] h-[300px] md:h-[500px] md:w-[500px] lg:h-[550px] lg:w-[550px] xl:h-[550px] xl:w-[550px] 2xl:h-[525px] 2xl:w-[525px] object-cover relative z-40"
-                  initial={{ x: 0, y: 70, opacity: 0 }} 
-                  whileInView={{ x: 0, y: 0, opacity: 1 }} 
+                  initial={{ x: 0, y: 70, opacity: 0 }}
+                  whileInView={{ x: 0, y: 0, opacity: 1 }}
                   transition={{ duration: 1, ease: "easeOut" }}
-                  // viewport={{ once: true, amount: 0.3 }} 
+                // viewport={{ once: true, amount: 0.3 }} 
                 />
               </div>
             </div>
@@ -252,10 +266,30 @@ export default function Home({ data }) {
                 </div>
               </div>
 
-
             </div>
           </div>
         </div>
+
+
+        <div className="">
+          <div className=" pt-10 space-y-10   px-4">
+            <div className="text-center" data-aos="fade-up" data-aos-duration="500">
+              <h2 className="text-[32px] text-white inter-bold inline-block relative">Indexed Journals<span className="block w-4/5 h-1 bg-[#FFD900] mx-auto mt-1"></span></h2>
+            </div>
+            <p className="text-center text-white inter-medium opacity-85 text-[18px] leading-[30px] max-w-[1000px] mx-auto">The Selective accepted papers of our International Conference on Computer Science Innovations will be recommended to publish in the following index & publisher Journals.</p>
+          </div>
+          <Marquee direction='right' pauseOnClick pauseOnHover>
+            <div className="  flex  pb-10 pt-10 ">
+              {imageItems.map((item, index) => (
+                <div key={index} className=" flex justify-center mr-10  py-5" >
+                  <img src={item.src} alt="images" className=" w-[300px] bg-white rounded-lg shadow-[0_0_8px_rgba(0,0,0,0.15)] hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] transition duratiom-300" />
+                </div>
+              ))}
+            </div>
+          </Marquee>
+
+        </div>
+
 
       </div>
     </>
