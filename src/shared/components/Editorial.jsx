@@ -199,7 +199,7 @@ function Editorial() {
         {
             name: "Dr.  Huiliang Zhao",
             university: "Guizhou minzu University",
-            expertise: " Department of product design",
+            expertise: " Department of Product Design",
             country: "China"
         },
         {
