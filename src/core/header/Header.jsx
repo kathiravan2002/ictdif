@@ -16,8 +16,12 @@ function Header() {
     const location = useLocation();
     const [subDropdown, setSubDropdown] = useState(false);
 
-    const isActive = location.pathname;
-    const ToggleMenu = () => {
+    const isActive = (path, includeHash = false) => {
+        const currentPath = includeHash
+            ? `${location.pathname}${location.hash}`
+            : location.pathname;
+        return currentPath === path;
+    }; const ToggleMenu = () => {
         setMenuOpen(!MenuOpen);
     };
 

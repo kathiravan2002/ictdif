@@ -86,7 +86,7 @@ const NavItems = ({ ToggleMenu, MenuOpen, isActive, }) => {
           <div onClick={ToggleMenu} className="absolute right-5 top-5 cursor-pointer"><IoClose className="text-2xl" /></div>
 
           <ul className="flex flex-col items-start mt-0 *:my-2 *:px-2  overflow-y-auto max-h-[calc(100vh-150px)] ">
-            <Link to="/" className={` ${isActive == '/' ? 'text-white bg-[#FF521C]  rounded-lg min-w-[75px] py-1  px-2' : ' '}`}>
+            <Link to="/" className={` ${isActive ('/') ? 'text-white bg-[#FF521C]  rounded-lg min-w-[75px] py-1  px-2' : ' '}`}>
               <li
                 onClick={() => {
                   ToggleMenu(false);
@@ -99,42 +99,53 @@ const NavItems = ({ ToggleMenu, MenuOpen, isActive, }) => {
 
 
 
-            <li ref={dropdown1Ref} >
-              <Link onClick={() => setDropdown1(!dropdown1)} className={`flex items-center gap-1  ${about.some(link => location.pathname === link.path)
-                ? 'text-white bg-white  py-1 px-1 rounded-lg'
-                : ''
-                }`}>
+           <li ref={dropdown1Ref} >
+              <button
+                onClick={() => setDropdown1(!dropdown1)}
+                className={`flex items-center gap-1 cursor-pointer ${about.some(link =>
+                  link.children
+                    ? link.children.some(sub => isActive(`${sub.path}#${sub.id}`, true))
+                    : isActive(link.path)
+                )
+                  ? 'text-white bg-[#FF521C]   py-1 px-2 rounded-lg'
+                  : ''
+                  }`}
+              >
                 About Us
                 <FaChevronDown
                   className={`${dropdown1 ? 'rotate-180' : 'rotate-0'} duration-200 text-xs`}
                 />
-              </Link>
+              </button>
 
               {dropdown1 && (
-                <div className="border border-gray-400 top-9 rounded-lg mt-1">
+                <div className="border-1 border-gray-400 top-9 rounded-lg mt-1">
                   <ul className="p-2 text-sm max-w-none w-full whitespace-nowrap">
                     {about.map((link, index) => {
-                      const isActive = location.pathname === link.path;
-
+                      const isParentActive = link.children
+                        ? link.children.some(sub =>
+                          isActive(`${sub.path}#${sub.id}`, true)
+                        )
+                        : isActive(link.path);
                       return (
                         <li key={index} className="relative">
                           {link.children ? (
                             <>
                               <button
                                 onClick={() => toggleSubDropdown(index)}
-                                className="w-full flex justify-between items-center px-4 py-1.5 rounded-md cursor-pointer"
+                                className={`w-full flex justify-between items-center px-4 py-1.5 rounded-md cursor-pointer ${isParentActive ? 'text-white bg-[#FF521C]' : ''
+                                  }`}
                               >
                                 {link.name}
                                 <FaChevronDown
-                                  className={`${subDropdown[index] ? "rotate-180" : "rotate-0"} text-xs`}
+                                  className={`${subDropdown[index] ? 'rotate-180' : 'rotate-0'
+                                    } text-xs`}
                                 />
                               </button>
-
                               {subDropdown[index] && (
-                                <ul className="ml-4 mt-1 border rounded-lg border-gray-400 pl-2">
+                                <ul className="ml-4 mt-1 rounded-lg border-1 border-gray-400 pl-2 px-2 py-2">
                                   {link.children.map((sub, subIndex) => {
                                     const subPathWithHash = `${sub.path}#${sub.id}`;
-                                    const isSubActive = location.pathname + location.hash === subPathWithHash;
+                                    const isSubActive = isActive(subPathWithHash, true);
 
                                     return (
                                       <li key={subIndex}>
@@ -144,10 +155,8 @@ const NavItems = ({ ToggleMenu, MenuOpen, isActive, }) => {
                                             scrollToSection(sub.id);
                                             setDropdown1(false);
                                             toggleSubDropdown(index);
-                                            ToggleMenu(false);
-
                                           }}
-                                          className={`block px-4 py-1.5 rounded-md cursor-pointer ${isSubActive ? "" : ""
+                                          className={`block px-4 py-1.5 rounded-md cursor-pointer ${isSubActive ? 'text-white bg-[#FF521C]' : ''
                                             }`}
                                         >
                                           {sub.name}
@@ -163,9 +172,10 @@ const NavItems = ({ ToggleMenu, MenuOpen, isActive, }) => {
                               to={link.path}
                               onClick={() => {
                                 setDropdown1(false);
-                                setSubDropdown(false);
+                                setSubDropdown({});
                               }}
-                              className={`block px-4 py-1.5 rounded-md cursor-pointer ${isActive ? "" : ""}`}
+                              className={`block px-4 py-1.5 rounded-md cursor-pointer ${isActive(link.path) ? 'text-white bg-[#FF521C]' : ''
+                                }`}
                             >
                               {link.name}
                             </Link>
@@ -222,7 +232,7 @@ const NavItems = ({ ToggleMenu, MenuOpen, isActive, }) => {
             </li>
 
 
-            <Link to="/contact-us" className={` ${isActive == '/contact-us' ? 'text-white bg-[#FF521C]  rounded-lg min-w-[75px] py-1  px-2' : ''}`}>
+            <Link to="/contact-us" className={` ${isActive ( '/contact-us') ? 'text-white bg-[#FF521C]  rounded-lg min-w-[75px] py-1  px-2' : ''}`}>
               <li
                 onClick={() => {
                   ToggleMenu(false);
