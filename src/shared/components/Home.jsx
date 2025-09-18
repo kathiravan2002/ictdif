@@ -271,12 +271,12 @@ export default function Home({ data }) {
         </div>
 
 
-        <div className="">
-          <div className=" pt-10 space-y-10   px-4">
+        <div className="max-w-[90rem] mx-auto">
+          <div className="px-4">
             <div className="text-center" data-aos="fade-up" data-aos-duration="500">
               <h2 className="text-[32px] text-white inter-bold inline-block relative">Indexed Journals<span className="block w-4/5 h-1 bg-[#FFD900] mx-auto mt-1"></span></h2>
             </div>
-            <p className="text-center text-white inter-medium opacity-85 text-[18px] leading-[30px] max-w-[1000px] mx-auto">The Selective accepted papers of our International Conference on Technology and Data Innovations for the Future will be recommended to publish in the following index & publisher Journals.</p>
+            <p className="text-center text-white inter-medium opacity-85 text-[18px] leading-[30px] max-w-[1000px] mx-auto mt-4">The Selective accepted papers of our International Conference on Technology and Data Innovations for the Future will be recommended to publish in the following index & publisher Journals.</p>
           </div>
           <Marquee direction='right' pauseOnClick pauseOnHover>
             <div className="  flex  pb-10 pt-10 ">
