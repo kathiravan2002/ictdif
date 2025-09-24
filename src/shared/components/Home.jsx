@@ -2,6 +2,7 @@ import { TbCircleArrowRightFilled } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
+import { useState } from "react";
 
 export default function Home({ data }) {
   const imageItems = [
@@ -17,6 +18,20 @@ export default function Home({ data }) {
     { src: "/assets/images/associates/10.jpg", },
     { src: "/assets/images/associates/11.jpg", },
   ];
+  const [activeYear, setActiveYear] = useState("2025");
+
+  const dates = {
+    "2025": [
+      { title: "Full Paper Submission Deadline", date: "01-09-2025" },
+      { title: "Author Acceptance Notification", date: "05-09-2025" },
+      { title: "Conference Date", date: "16-09-2025" },
+    ],
+    "2024": [
+      { title: "Full Paper Submission Deadline", date: "21-10-2024" },
+      { title: "Author Acceptance Notification", date: "31-10-2024" },
+      { title: "Conference Date", date: "14-11-2024" },
+    ],
+  };
 
   return (
     <>
@@ -231,41 +246,46 @@ export default function Home({ data }) {
             <h2 className="text-[32px] text-white inter-bold inline-block relative">Remember the days<span className="block w-4/5 h-1 bg-[#FFD900] mx-auto mt-1"></span></h2>
           </div>
           <div className="max-w-[90rem] mx-auto 2xl:px-0 xl:px-5 px-5">
+            {/* Tabs */}
+            <div className="flex justify-center gap-4 mt-5">
+              {Object.keys(dates).map((year) => (
+                <button
+                  key={year}
+                  onClick={() => setActiveYear(year)}
+                  className={`px-6 py-2 rounded-2xl inter-bold transition-all cursor-pointer ${activeYear === year
+                    ? "bg-yellow-500 text-white"
+                    : "bg-gray-200 text-gray-700"
+                    }`}
+                >
+                  {year}
+                </button>
+              ))}
+            </div>
+
+            {/* Dates Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-14 gap-8 mt-10">
-
-              <div className="grid grid-cols-1 md:grid-cols-12 bg-[#FFD900] rounded-2xl relative">
-                <div className="md:bg-[#FFD900] bg-white w-24 h-24 absolute -top-4 rounded-lg lg:-right-4 -right-3 z-10" style={{ clipPath: 'polygon(0 0, 100% 100%, 100% 0)' }} ></div>
-                <div className="col-span-4  flex justify-center items-center xl:p-10 p-5" data-aos="fade-left" data-aos-duration="500">
-                  <i className="fi fi-sr-calendar text-5xl"></i>
+              {dates[activeYear].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="grid grid-cols-1 md:grid-cols-12 bg-[#FFD900] rounded-2xl relative"
+                >
+                  <div
+                    className="md:bg-[#FFD900] bg-white w-24 h-24 absolute -top-4 rounded-lg lg:-right-4 -right-3 z-10"
+                    style={{ clipPath: "polygon(0 0, 100% 100%, 100% 0)" }}
+                  ></div>
+                  <div
+                    className="col-span-4 flex justify-center items-center xl:p-10 p-5"
+                    data-aos="fade-left"
+                    data-aos-duration="500"
+                  >
+                    <i className="fi fi-sr-calendar text-5xl"></i>
+                  </div>
+                  <div className="col-span-8 space-y-3 bg-white text-center rounded-2xl flex flex-col items-center justify-center p-2 z-20">
+                    <p className="inter-bold md:text-xl text-lg">{item.title}</p>
+                    <p className="inter-bold md:text-xl text-lg">{item.date}</p>
+                  </div>
                 </div>
-                <div className="col-span-8 space-y-3 bg-white text-center rounded-2xl flex flex-col items-center justify-center p-2 z-20">
-                  <p className="inter-bold md:text-xl text-lg">Full Paper Submission Deadline</p>
-                  <p className="inter-bold md:text-xl text-lg">October 15<sup>th</sup> 2025</p>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-12 bg-[#FFD900] sm: rounded-2xl relative">
-                <div className="md:bg-[#FFD900] bg-white w-24 h-24 absolute -top-4 rounded-lg lg:-right-4 -right-3 z-10" style={{ clipPath: 'polygon(0 0, 100% 100%, 100% 0)' }}></div>
-                <div className="col-span-4  flex justify-center items-center xl:p-10 p-5" data-aos="fade-left" data-aos-duration="500">
-                  <i className="fi fi-sr-calendar text-5xl"></i>
-                </div>
-                <div className="col-span-8 space-y-3 bg-white text-center rounded-2xl flex flex-col items-center justify-center p-2 z-20">
-                  <p className="inter-bold md:text-xl text-lg">Author Acceptance Notification</p>
-                  <p className="inter-bold md:text-xl text-lg">October 18<sup>th</sup> 2025</p>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-12 bg-[#FFD900] rounded-2xl relative">
-                <div className="md:bg-[#FFD900] bg-white  w-24 h-24 absolute -top-4 rounded-lg lg:-right-4 -right-3 z-10" style={{ clipPath: 'polygon(0 0, 100% 100%, 100% 0)' }}></div>
-                <div className="col-span-4  flex justify-center items-center xl:p-10 p-5" data-aos="fade-left" data-aos-duration="500">
-                  <i className="fi fi-sr-calendar text-5xl"></i>
-                </div>
-                <div className="col-span-8 space-y-3 bg-white text-center rounded-2xl flex flex-col items-center justify-center p-2 z-20">
-                  <p className="inter-bold md:text-xl text-lg">Final Registration Deadline</p>
-                  <p className="inter-bold md:text-xl text-lg">October 22<sup>nd</sup> 2025</p>
-                </div>
-              </div>
-
+              ))}
             </div>
           </div>
         </div>
