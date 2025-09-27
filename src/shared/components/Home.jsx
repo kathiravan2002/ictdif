@@ -4,7 +4,10 @@ import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import { useState } from "react";
 
-export default function Home({ data }) {
+export default function Home() {
+  const [activeYear, setActiveYear] = useState("2025");
+  const [flipped, setFlipped] = useState(null);
+
   const imageItems = [
     { src: '/assets/images/associates/1.png', },
     { src: '/assets/images/associates/2.jpg', },
@@ -18,7 +21,27 @@ export default function Home({ data }) {
     { src: "/assets/images/associates/10.jpg", },
     { src: "/assets/images/associates/11.jpg", },
   ];
-  const [activeYear, setActiveYear] = useState("2025");
+
+  const item = [
+    {
+      name: "Dr. Noureddine Seddari",
+      department: "Department of Computer Science",
+      university: "University of Skikda",
+      location: "Algeria",
+    },
+    {
+      name: "Dr. Omar Bin Samin",
+      department: "Department of Information Technology",
+      university: "Institute of Management Sciences",
+      location: "Pakistan",
+    },
+    {
+      name: "Dr. Hadhrami Ab. Ghani",
+      department: "Department of Data Science and Computing",
+      university: "Universiti Malaysia Kelantan",
+      location: "Malaysia",
+    },
+  ]
 
   const dates = {
     "2025": [
@@ -290,6 +313,28 @@ export default function Home({ data }) {
           </div>
         </div>
 
+        <div id="key-invitees" className="max-w-[1400px] mx-auto px-4 scroll-mt-[90px] pb-20">
+          <div className="text-center" data-aos="fade-up" data-aos-duration="500">
+            <h2 className="text-[32px] text-white inter-bold inline-block relative">Key Invitees<span className="block w-4/5 h-1 bg-[#FFD900] mx-auto mt-1"></span></h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 mx-auto w-full">
+            {item.map((person, index) => (
+              <div
+                className={`card group  rounded-2xl shadow-[0_0_8px_rgba(0,0,0,0.15)]  bg-white   overflow-hidden relative h-38 cursor-pointer hover:-translate-y-1 transition-transform duration-300 `}
+                onClick={() => setFlipped(flipped === index ? null : index)}
+              >
+                <div className={`card-front absolute inset-0 flex items-center justify-center rounded-3xl    text-black p-5 transition-all duration-300 z-10 ${flipped === index ? 'opacity-0 translate-y-full' : 'opacity-100 translate-y-0'} lg:group-hover:opacity-0 lg:group-hover:translate-y-full`}>
+                  <h2 className="md:text-2xl text-xl lg:text-[24px] poppins-semibold text-center text-yellow-500  duration-300   " >{person.name}</h2>
+                </div>
+                <div className={`poppins-medium card-back absolute inset-0 flex flex-col text-center items-center   rounded-3xl      justify-center text-gray-800 p-5 transition-all duration-300 ${flipped === index ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'} lg:group-hover:opacity-100 lg:group-hover:translate-y-0`}>
+                  <p className=" text-base mb-1">{person.department},</p>
+                  <p className="text-base mb-1 text-yellow-500 ">{person.university},</p>
+                  <p className="text-base">{person.location}.</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
         <div className="max-w-[90rem] mx-auto">
           <div className="px-4">

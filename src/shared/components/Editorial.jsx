@@ -257,17 +257,12 @@ function Editorial() {
             country: "Bangladesh"
         },
         {
-            name: "Dr. Folasade M. Dahunsi",
-            university: "Federal University of Technology",
-            expertise: "Department of Computer Science and Engineering",
-            country: "Nigeria"
-        },
-        {
-            name: "Dr. Moses Adah Agana",
-            university: "University of Calabar",
+            name: "Dr. Salah Eddine Benatia",
+            university: "Mascara University",
             expertise: "Department of Computer Science",
-            country: "Nigeria"
+            country: "Algeria"
         },
+       
         {
             name: "Dr. Kabelo Given Chuma",
             university: "University of South Africa",
@@ -279,6 +274,12 @@ function Editorial() {
             university: "SNS College of Technology",
             expertise: "Department of Electronics and Communication Engineering",
             country: "India"
+        },
+         {
+            name: "Dr. Moses Adah Agana",
+            university: "University of Calabar",
+            expertise: "Department of Computer Science",
+            country: "Nigeria"
         },
         {
             name: "Dr. Chinwe Peace Igiri",
@@ -293,7 +294,7 @@ function Editorial() {
             country: "Lebanon"
         },
         {
-            name: "Dr.A. Gabriel ",
+            name: "Dr. Gabriel A. Ogunmola",
             university: "Sharda University",
             expertise: "Department of Information Technology",
             country: "Uzbekistan"
