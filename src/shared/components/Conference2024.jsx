@@ -1124,7 +1124,7 @@ export default function Conference2024() {
                             onClick={closeDialog}
                         >
                             <div
-                                className="relative bg-white p-2 max-w-6xl w-full rounded-3xl shadow-2xl border-4 border-[#FFD900]"
+                                className="relative bg-white p-2 max-w-4xl w-full rounded-3xl shadow-2xl border-4 border-[#FFD900]"
                                 onClick={(e) => e.stopPropagation()}
                             >
                                 <button
