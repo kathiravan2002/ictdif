@@ -5,24 +5,15 @@ import { RiFileList3Fill, RiFilePaper2Fill, RiCheckboxCircleFill, RiDraftFill, R
 function Datesandbank() {
   const [activeYear, setActiveYear] = useState("2025");
 
-  const datesByYear = {
-    "2025": [
-      { title: 'Abstract Submission Deadline', date: '25-08-2025', icon: <RiFileList3Fill className="w-7 h-7" /> },
-      { title: 'Full Paper Submission Deadline', date: '01-09-2025', icon: <RiFilePaper2Fill className="w-7 h-7" /> },
-      { title: 'Notification of Acceptance', date: '05-09-2025', icon: <RiCheckboxCircleFill className="w-7 h-7" /> },
-      { title: 'Final Paper Submission', date: '08-09-2025', icon: <RiDraftFill className="w-7 h-7" /> },
-      { title: 'Registration Deadline', date: '12-09-2025', icon: <RiCalendarCheckFill className="w-7 h-7" /> },
-      { title: 'Conference Date', date: '16-09-2025', icon: <RiNewspaperFill className="w-7 h-7" /> },
-    ],
-    "2024": [
-      { title: 'Abstract Submission Deadline', date: '21-10-2024', icon: <RiFileList3Fill className="w-7 h-7" /> },
-      { title: 'Full Paper Submission Deadline', date: '25-10-2024', icon: <RiFilePaper2Fill className="w-7 h-7" /> },
-      { title: 'Notification of Acceptance', date: '31-10-2024', icon: <RiCheckboxCircleFill className="w-7 h-7" /> },
-      { title: 'Final Paper Submission', date: '04-11-2024', icon: <RiDraftFill className="w-7 h-7" /> },
-      { title: 'Registration Deadline', date: '08-11-2024', icon: <RiCalendarCheckFill className="w-7 h-7" /> },
-      { title: 'Conference Date', date: '14-11-2024', icon: <RiNewspaperFill className="w-7 h-7" /> },
-    ],
-  };
+  const datesByYear = [
+    
+      { title: 'Abstract Submission', date: '18-03-2025', icon: <RiFileList3Fill className="w-7 h-7" /> },
+      { title: 'Abstract Acceptance Date', date: '04-04-2025', icon: <RiFilePaper2Fill className="w-7 h-7" /> },
+      { title: 'Full Paper Submission', date: '26-04-2025', icon: <RiCheckboxCircleFill className="w-7 h-7" /> },
+      { title: 'Acceptance Notifications', date: '09-07-2025', icon: <RiCalendarCheckFill className="w-7 h-7" />},
+      { title: 'Registration Deadline / Final Paper', date: '21-08-2025', icon: <RiDraftFill className="w-7 h-7" /> },
+  
+  ]
 
   return (
     <div>
@@ -32,26 +23,9 @@ function Datesandbank() {
           <h2 className="md:text-[32px] text-[28px] text-white inter-bold inline-block relative">Important Dates<span className="block w-4/5 h-1 bg-[#FFD900] mx-auto mt-1"></span></h2>
         </div>
        <div className="max-w-[90rem] mx-auto 2xl:px-0 xl:px-5 px-5 py-10">
-      {/* Tabs */}
-      <div className="flex justify-center gap-4 mb-10">
-        {Object.keys(datesByYear).map((year) => (
-          <button
-            key={year}
-            onClick={() => setActiveYear(year)}
-            className={`px-6 py-2 rounded-2xl inter-bold transition-all cursor-pointer ${
-              activeYear === year
-                ? "bg-yellow-500 text-white"
-                : "bg-gray-200 text-gray-700"
-            }`}
-          >
-            {year}
-          </button>
-        ))}
-      </div>
-
-      {/* Dates Grid */}
+     
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-14 gap-8">
-        {datesByYear[activeYear].map((item, index) => (
+        {datesByYear.map((item, index) => (
           <div
             key={index}
             className="grid grid-cols-1 lg:grid-cols-1 bg-[#FFD900] rounded-2xl relative group hover:-translate-y-2 duration-300"

@@ -147,22 +147,25 @@ function Papersubmission() {
 
                             <div className="bg-white shadow-[0_0_10px_rgba(0,0,0,0.15)] rounded-lg p-6 flex flex-col w-full h-full" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
                                 <h2 className="poppins-bold text-xl text-[#FF521C] my-3">Submission Guidelines</h2>
-                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Manuscripts must be written in professional, fluent English.</p></div>
-                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">The paper should not exceed 10 pages, including all elements.</p></div>
-                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Authors must follow the official IEEE paper format.</p></div>
-                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Submissions are accepted only in PDF or DOCX formats.</p></div>
-                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Each paper must include an abstract of up to 300 words.</p></div>
-                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Remove all author details for anonymity in double-blind review.</p></div>
+                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Manuscripts must be in clear, professional English.</p></div>
+                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Maximum length: 10 pages, including figures and references.</p></div>
+                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Follow official IEEE formatting.</p></div>
+                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Submit in PDF or DOCX formats only.</p></div>
+                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Remove all author details for double-blind review.</p></div>
                             </div>
 
                             <div className="bg-white shadow-[0_0_10px_rgba(0,0,0,0.15)] rounded-lg p-6 flex flex-col w-full h-full" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
                                 <h2 className="poppins-bold text-xl text-[#FF521C]">Important Notes</h2>
-                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">All submissions undergo a rigorous double-blind peer review.</p></div>
-                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">At least one author must register to present the paper.</p></div>
-                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">All papers will be checked for plagiarism before review.</p></div>
-                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Duplicate submissions to other venues are strictly prohibited.</p></div>
-                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Authors must attend and present their accepted papers.</p></div>
-                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Accepted papers will appear in the official proceedings.</p></div>
+                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">All papers undergo double-blind peer review.</p></div>
+                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Provide author details and valid email at submission.</p></div>
+                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Plagiarism more than 25% leads to rejection.</p></div>
+                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Submissions must be original and not submitted elsewhere.</p></div>
+                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Authors must attend and present accepted papers.</p></div>
+                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Accepted papers will appear in official proceedings.</p></div>
+                            </div>
+                            <div className="bg-white shadow-[0_0_10px_rgba(0,0,0,0.15)] rounded-lg p-6 flex flex-col w-full h-full" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+                                <h2 className="poppins-bold text-xl text-[#FF521C]">Registration Guidelines</h2>
+                                <div className="flex gap-2 items-center"><TbPointFilled className='flex text-[18px] shrink-0 text-[#FF521C]' /> <p className="text-base inter-regular leading-[30px] opacity-85 text-justify">Register now for ICTDIF-2025 and be part of a premier international conference with absolutely no registration fees.</p></div>
                             </div>
                         </div>
                         <div className=" max-w-[750px] w-full bg-white rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.15)] flex items-center justify-center " data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
@@ -230,18 +233,14 @@ function Papersubmission() {
                                             value={formData.Paper_Track}
                                             onChange={handleFileInputChange}
                                             required
-                                            className="w-full border poppins-medium outline-[#FF521C] border-gray-300 rounded-md p-2  text-base"
+                                            className="cursor-pointer w-full border poppins-medium outline-[#FF521C] border-gray-300 rounded-md p-2  text-base"
                                         >
                                             <option value="">-- Select Category --</option>
                                             <option value="Intelligent Systems">Intelligent Systems</option>
                                             <option value="Adaptive Learning">Adaptive Learning</option>
                                             <option value="Decentralized Solutions">Decentralized Solutions</option>
-                                            <option value="Security Innovations">Security Innovations</option>
                                             <option value="Cloud Ecosystems">Cloud Ecosystems</option>
                                             <option value="Insight Analytics">Insight Analytics</option>
-                                            <option value="Connected Devices">Connected Devices</option>
-                                            <option value="User Experience">User Experience</option>
-                                            <option value="Digital Evolution">Digital Evolution</option>
                                         </select>
                                     </div>
 

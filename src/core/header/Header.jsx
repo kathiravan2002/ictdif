@@ -11,8 +11,10 @@ function Header() {
     const [scroll, setScroll] = useState(false);
     const dropdown1Ref = useRef(null);
     const dropdown2Ref = useRef(null);
+    const dropdown3Ref = useRef(null);
     const [dropdown1, setDropdown1] = useState(false);
     const [dropdown2, setDropdown2] = useState(false);
+    const [dropdown3, setDropdown3] = useState(false);
     const location = useLocation();
     const [subDropdown, setSubDropdown] = useState(false);
 
@@ -36,6 +38,9 @@ function Header() {
 
             if (dropdown2Ref.current && !dropdown2Ref.current.contains(event.target)) {
                 setDropdown2(false);
+            }
+            if (dropdown3Ref.current && !dropdown3Ref.current.contains(event.target)) {
+                setDropdown3(false);
             }
 
         };
@@ -94,7 +99,15 @@ function Header() {
             ]
         }
     ];
+
+    const earlier = [
+        { name: "1<sup>st</sup> ICTDIF 2024", path: "/ictdif-2024" },
+    ];
+    
     const author = [
+        { name: "Call for Paper", path: "/call-for-paper" },
+        { name: "Conference Statistics", path: "/conference-statistics" },
+        { name: "Conference Proceedings", path: "/conference-proceedings" },
         { name: "Conference Tracks", path: "/conference-tracks" },
         { name: "Key Dates", path: "/key-dates" },
         { name: "Paper Submission", path: "/paper-submission" },
@@ -192,14 +205,29 @@ function Header() {
                                     </div>
                                 )}
                             </li>
-                            <li ref={dropdown2Ref} className="cursor-pointer relative"><Link onClick={() => setDropdown2(!dropdown2)} className={`flex items-center gap-1  ${author.some(link => location.pathname === link.path) ? '  ' : '   '}`}>Author’s Desk<FaChevronDown className={`${dropdown2 ? 'rotate-180' : 'rotate-0'} duration-200 text-xs `} /> </Link>
+                            <li ref={dropdown2Ref} className="cursor-pointer relative"><Link onClick={() => setDropdown2(!dropdown2)} className={`flex items-center gap-1  ${earlier.some(link => location.pathname === link.path) ? '  ' : '   '}`}>Earlier Conference<FaChevronDown className={`${dropdown2 ? 'rotate-180' : 'rotate-0'} duration-200 text-xs `} /> </Link>
                                 {dropdown2 &&
+                                    <div className={`absolute  border-2 border-white  mt-3 rounded-lg text-white bg-gradient-to-t from-[#993111] to-[#FF521C]    ${scroll ? ' ' : ' '}`}>
+                                        <ul className="p-2  max-w-none w-full whitespace-nowrap ">
+                                            {earlier.map((link, index) => {
+                                                const isActive = location.pathname === link.path;
+                                                return (
+                                                    <Link key={index} onClick={() => setDropdown2(!dropdown2)} to={link.path} className="!w-full" >
+                                                        <li className={`px-4 py-1 rounded-md transition cursor-pointer poppins-medium text-lg ${isActive ? '   ' : ''}`} dangerouslySetInnerHTML={{__html:link.name}}/>
+                                                    </Link>
+                                                )
+                                            })}
+                                        </ul>
+                                    </div>}
+                            </li>
+                            <li ref={dropdown3Ref} className="cursor-pointer relative"><Link onClick={() => setDropdown3(!dropdown3)} className={`flex items-center gap-1  ${author.some(link => location.pathname === link.path) ? '  ' : '   '}`}>Author’s Desk<FaChevronDown className={`${dropdown3 ? 'rotate-180' : 'rotate-0'} duration-200 text-xs `} /> </Link>
+                                {dropdown3 &&
                                     <div className={`absolute  border-2 border-white  mt-3 rounded-lg text-white bg-gradient-to-t from-[#993111] to-[#FF521C]    ${scroll ? ' ' : ' '}`}>
                                         <ul className="p-2  max-w-none w-full whitespace-nowrap ">
                                             {author.map((link, index) => {
                                                 const isActive = location.pathname === link.path;
                                                 return (
-                                                    <Link key={index} onClick={() => setDropdown2(!dropdown2)} to={link.path} className="!w-full" >
+                                                    <Link key={index} onClick={() => setDropdown3(!dropdown3)} to={link.path} className="!w-full" >
                                                         <li className={`px-4 py-1 rounded-md transition cursor-pointer poppins-medium text-lg ${isActive ? '   ' : ''}`} >{link.name} </li>
                                                     </Link>
                                                 )

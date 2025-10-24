@@ -34,7 +34,7 @@ function Registerpage() {
                                     <div className="mb-5">
                                         <i className="fi fi-sr-calendar text-5xl "></i>
                                     </div>
-                                    <p>October 26, 2025 </p>
+                                    <p>September 16, 2025 </p>
                                     <p className='mt-2'>9:00 AM - 6:00 PM</p>
                                 </div>
 

@@ -10,6 +10,10 @@ import Conferencetrackspage from "../components/Conferencetrackspage";
 import Datesandbankpage from "../components/Datesandbankpage";
 import Contactuspage from "../components/Contactuspage";
 import Papersubmissionpage from "../components/Papersubmissionpage";
+import Callforpaperpage from "../components/Callforpaperpage";
+import Statisticspage from "../components/Statisticspage";
+import ICTDIF2024page from "../components/ICTDIF2024page";
+import Proceedings2025page from "../components/Proceedings2025page";
 
 
 
@@ -25,6 +29,10 @@ export default function Approuter() {
           <Route path="/editorial-board" element={<Editorialpage />} />
           <Route path="/organizing-committee" element={<Organizingpage />} />
           <Route path="/conference-tracks" element={<Conferencetrackspage />} />
+          <Route path="/call-for-paper" element={<Callforpaperpage />} />
+          <Route path="/conference-statistics" element={<Statisticspage />} />
+          <Route path="/conference-proceedings" element={<Proceedings2025page />} />
+          <Route path="/ictdif-2024" element={<ICTDIF2024page />} />
           <Route path="/key-dates" element={<Datesandbankpage />} />
           <Route path="/contact-us" element={<Contactuspage/>} />
           <Route path="/paper-submission" element={<Papersubmissionpage/>} />

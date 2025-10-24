@@ -14,16 +14,18 @@ function About() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <div className="flex justify-center items-center xl:order-none lg:order-2 order-2 " data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
                             <div className="space-y-6">
-                                <p className="text-white md:text-lg text-base inter-medium leading-[30px] text-justify">The International Conference on Technology and Data Innovations for the Future unites global experts to exchange ideas, present research, and explore transformative solutions driving advancements in technology, data science, and innovation worldwide.</p>
-                                <p className="text-white md:text-lg text-base inter-medium leading-[30px] text-justify">This conference fosters collaboration between academia, industry, and policymakers, addressing emerging trends in artificial intelligence, big data, blockchain, IoT, and digital transformation, with a focus on sustainable, impactful, and inclusive technological development.The Selective accepted papers of our International Conference on Technology and Data Innovations for the Future will be recommended to publish in the indexed Journals.</p>
+                                <p className="text-white md:text-lg text-base inter-medium leading-[30px] text-justify">The International Conference on Technology and Data Innovations for the Future (ICTDIF-2025) brings together global experts, researchers, and innovators to share ideas, present groundbreaking research, and explore transformative solutions driving advancements in technology, data science, and innovation worldwide.</p>
+                                <p className="text-white md:text-lg text-base inter-medium leading-[30px] text-justify">ICTDIF-2025 fosters collaboration across academia, industry, and policy-making, addressing emerging trends in Artificial Intelligence, Big Data, Blockchain, IoT, and Digital Transformation, with a focus on creating sustainable, impactful, and inclusive technological developments. Selected high-quality papers from the conference will be recommended for publication in indexed journals, offering a platform for international recognition.</p>
                                 <div className='space-y-2'>
+                                    <p className="md:text-lg text-base text-justify text-white inter-medium">Conference Vision & Impact :</p>
                                     <p className="md:text-lg text-base text-justify text-[#FFD900] inter-medium"><i className="fi fi-sr-hand-back-point-right text-white mr-3"></i>Inspire visionary thinking for the digital future</p>
                                     <p className="md:text-lg text-base text-justify text-[#FFD900] inter-medium"><i className="fi fi-sr-hand-back-point-right text-white mr-3"></i>Transform industries through technology-driven solutions</p>
                                     <p className="md:text-lg text-base text-justify text-[#FFD900] inter-medium"><i className="fi fi-sr-hand-back-point-right text-white mr-3"></i>Unlock the potential of data for societal progress</p>
                                     <p className="md:text-lg text-base text-justify text-[#FFD900] inter-medium"><i className="fi fi-sr-hand-back-point-right text-white mr-3"></i>Foster next-generation leadership in innovation</p>
                                     <p className="md:text-lg text-base text-justify text-[#FFD900] inter-medium"><i className="fi fi-sr-hand-back-point-right text-white mr-3"></i>Shape sustainable, intelligent, and inclusive ecosystems</p>
                                 </div>
-                               
+                                <p className="text-white md:text-lg text-base inter-medium leading-[30px] text-justify">ICTDIF-2025 is your gateway to global collaboration, knowledge exchange, and innovation that is shaping the future of intelligent technologies.</p>
+
                             </div>
                         </div>
 
