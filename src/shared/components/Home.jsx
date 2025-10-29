@@ -91,7 +91,7 @@ export default function Home() {
       <div className="overflow-hidden">
         <div className="bg-gradient-to-r from-[#993111] to-[#FF521C] overflow-hidden">
           <div className="max-w-[85rem] mx-auto ">
-            <div className="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 2xl:gap-10 py-[5%] 2xl:py-[8%] mt-38 lg:mt-25 2xl:mt-32 px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 2xl:gap-10 py-[5%] 2xl:py-[8%] mt-56 lg:mt-25 2xl:mt-32 px-4">
               <div className="flex justify-center items-center xl:order-none lg:order-2 order-2" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
                 <div className="space-y-8 ">
                   <h1 className="lg:text-5xl text-2xl inter-bold text-white lg:leading-16 lg:mt-0 mt-3 text-justify md:text-start ">2<sup className="">nd</sup> International Conference on Technology and Data Innovations for the Future</h1>
@@ -138,7 +138,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={` flex lg:justify-end justify-end lg:gap-5 gap-2  lg:px-5 px-2 lg:rounded-lg right-0  pt-5 pb-3 fixed lg:w-fit w-full z-30 transition-all duration-300 ${scrolled ? "bg-white  shadow-md py-2 2xl:top-[9%] xl:top-[9.5%] lg:top-[9.5%]  sm:top-[6.2%] top-[9%] " : "2xl:top-[11%] xl:top-[11%] lg:top-[9%] sm:top-[7%] top-[9%]  bg-transparent"}`} >
+        <div className={` flex lg:justify-end justify-end lg:gap-5 gap-2  lg:px-5 px-2 lg:rounded-lg right-0  pt-5 pb-3 fixed lg:w-fit w-full z-30 transition-all duration-300 ${scrolled ? "bg-white  shadow-md py-2 2xl:top-[9%] xl:top-[9.5%] lg:top-[9.5%]  sm:top-[6.2%] top-[7%] " : "2xl:top-[11%] xl:top-[11%] lg:top-[9%] sm:top-[7%] top-[9%]  bg-transparent"}`} >
 
           <button onClick={handleViewProceedings} className="group relative overflow-hidden hover:text-[#FF521C] bg-[#FFD900]  text-[#000] poppins-medium  cursor-pointer py-3 px-6 rounded-lg shadow-lg transform transition-all duration-200 hover:scale-105 hover:shadow-xl active:scale-95 flex items-center gap-2">
             <FaFilePdf className=" lg:text-2xl text-lg z-10" />
@@ -183,7 +183,7 @@ export default function Home() {
         )}
       </div>
 
-      <div className="py-20 bg-gradient-to-r from-[#993111] to-[#FF521C] px-4">
+      <div className="py-20 bg-gradient-to-r from-[#993111] to-[#FF521C] px-4 overflow-hidden">
 
         <div className="text-center" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
           <h2 className="text-[32px] text-white inter-bold inline-block relative">About Us <span className="block w-4/5 h-1 bg-[#FFD900] mx-auto mt-1"></span></h2>
@@ -232,7 +232,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=" bg-gradient-to-r from-[#993111] to-[#FF521C] px-4">
+      <div className=" bg-gradient-to-r from-[#993111] to-[#FF521C] px-4 overflow-hidden" >
         <div className="text-center" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
           <h2 className="text-[32px] text-white inter-bold inline-block relative">Our Mission <span className="block w-4/5 h-1 bg-[#FFD900] mx-auto mt-1"></span></h2>
         </div>
@@ -347,7 +347,7 @@ export default function Home() {
         </div>
       </div> */}
 
-      <div className="py-20 bg-gradient-to-r from-[#993111] to-[#FF521C] px-4">
+      <div className="py-20 bg-gradient-to-r from-[#993111] to-[#FF521C] px-4 overflow-hidden">
         <div className="text-center" data-aos="fade-up" data-aos-duration="500">
           <h2 className="text-[32px] text-white inter-bold inline-block relative">Remember the days<span className="block w-4/5 h-1 bg-[#FFD900] mx-auto mt-1"></span></h2>
         </div>

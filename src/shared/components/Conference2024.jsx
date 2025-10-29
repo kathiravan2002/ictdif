@@ -649,7 +649,7 @@ export default function Conference2024() {
         <div>
             <div className="bg-gradient-to-r from-[#993111] to-[#FF521C] overflow-hidden">
                 <div className="max-w-[85rem] mx-auto ">
-                    <div className="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 2xl:gap-10 py-[5%] 2xl:py-[8%] mt-38 lg:mt-25 2xl:mt-32 px-4">
+                    <div className="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 2xl:gap-10 py-[5%] 2xl:py-[8%] mt-56 lg:mt-25 2xl:mt-32 px-4">
                         <div className="flex justify-center items-center xl:order-none lg:order-2 order-2" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
                             <div className="space-y-8 ">
                                 <h1 className="lg:text-5xl text-2xl inter-bold text-white lg:leading-16 lg:mt-0 mt-3 text-justify md:text-start ">1<sup className="">st</sup> International Conference on Technology and Data Innovations for the Future</h1>
@@ -683,52 +683,52 @@ export default function Conference2024() {
                             />
                         </div>
                     </div>
-                    
+
                 </div>
-        <div className={` flex lg:justify-end justify-end lg:gap-5 gap-2  lg:px-5 px-2 lg:rounded-lg right-0  pt-5 pb-3 fixed lg:w-fit w-full z-30 transition-all duration-300 ${scrolled ? "bg-white  shadow-md py-2 2xl:top-[9%] xl:top-[9.5%] lg:top-[9.5%]  sm:top-[6.2%] top-[9%] " : "2xl:top-[11%] xl:top-[11%] lg:top-[9%] sm:top-[7%] top-[9%]  bg-transparent"}`} >
-                
-                          <button onClick={handleViewProceedings} className="group relative overflow-hidden hover:text-[#FF521C] bg-[#FFD900]  text-[#000] poppins-medium  cursor-pointer py-3 px-6 rounded-lg shadow-lg transform transition-all duration-200 hover:scale-105 hover:shadow-xl active:scale-95 flex items-center gap-2">
-                            <FaFilePdf className=" lg:text-2xl text-lg z-10" />
-                            <span className=" text-sm lg:text-base duration-300 z-10">Proceedings - 2024</span>
-                            <div className="absolute inset-0  scale-x-0 group-hover:scale-x-100 duration-500 bg-white rounded-md"></div>
-                          </button>
-                          <button
-                            className="group relative overflow-hidden hover:text-[#FF521C] bg-[#FFD900]  text-[#000] poppins-medium  cursor-pointer py-3 px-6 rounded-lg shadow-lg transform transition-all duration-200 hover:scale-105 hover:shadow-xl active:scale-95 flex items-center gap-2"
-                            onClick={handleDownloadPDF}
-                          >
-                            <FaDownload className="relative z-20 lg:text-xl text-lg drop-shadow-sm  group-hover:-translate-y-1 group-hover:scale-110 duration-300" />
-                            <div className="absolute inset-0  scale-x-0 group-hover:scale-x-100 duration-500 bg-white rounded-md"></div>
-                
-                          </button>
-                        </div>
-                        {showProceedings && (
-                          <div className="fixed inset-0 bg-black/70  flex items-center justify-center z-50">
-                            <div className="bg-white rounded-lg shadow-lg max-w-[1450px] w-full mx-2 lg:mx-0 max-h-[90vh] overflow-y-auto">
-                              <div className="flex justify-end md:gap-10 gap-5 items-center p-4 border-b">
+                <div className={` flex lg:justify-end justify-end lg:gap-5 gap-2  lg:px-5 px-2 lg:rounded-lg right-0  pt-5 pb-3 fixed lg:w-fit w-full z-30 transition-all duration-300 ${scrolled ? "bg-white  shadow-md py-2 2xl:top-[9%] xl:top-[9.5%] lg:top-[9.5%]  sm:top-[6.2%] top-[7%] " : "2xl:top-[11%] xl:top-[11%] lg:top-[9%] sm:top-[7%] top-[9%]  bg-transparent"}`} >
+
+                    <button onClick={handleViewProceedings} className="group relative overflow-hidden hover:text-[#FF521C] bg-[#FFD900]  text-[#000] poppins-medium  cursor-pointer py-3 px-6 rounded-lg shadow-lg transform transition-all duration-200 hover:scale-105 hover:shadow-xl active:scale-95 flex items-center gap-2">
+                        <FaFilePdf className=" lg:text-2xl text-lg z-10" />
+                        <span className=" text-sm lg:text-base duration-300 z-10">Proceedings - 2024</span>
+                        <div className="absolute inset-0  scale-x-0 group-hover:scale-x-100 duration-500 bg-white rounded-md"></div>
+                    </button>
+                    <button
+                        className="group relative overflow-hidden hover:text-[#FF521C] bg-[#FFD900]  text-[#000] poppins-medium  cursor-pointer py-3 px-6 rounded-lg shadow-lg transform transition-all duration-200 hover:scale-105 hover:shadow-xl active:scale-95 flex items-center gap-2"
+                        onClick={handleDownloadPDF}
+                    >
+                        <FaDownload className="relative z-20 lg:text-xl text-lg drop-shadow-sm  group-hover:-translate-y-1 group-hover:scale-110 duration-300" />
+                        <div className="absolute inset-0  scale-x-0 group-hover:scale-x-100 duration-500 bg-white rounded-md"></div>
+
+                    </button>
+                </div>
+                {showProceedings && (
+                    <div className="fixed inset-0 bg-black/70  flex items-center justify-center z-50">
+                        <div className="bg-white rounded-lg shadow-lg max-w-[1450px] w-full mx-2 lg:mx-0 max-h-[90vh] overflow-y-auto">
+                            <div className="flex justify-end md:gap-10 gap-5 items-center p-4 border-b">
                                 <button className="text-xl text-gray-700 hover:text-gray-900 font-semibold flex items-center gap-4 cursor-pointer" onClick={handleDownloadPDF}>Download <FaDownload className='flex shrink-0' /></button>
                                 <button
-                                  className="text-gray-700 hover:text-gray-900 text-2xl cursor-pointer"
-                                  onClick={handleCloseModal}
+                                    className="text-gray-700 hover:text-gray-900 text-2xl cursor-pointer"
+                                    onClick={handleCloseModal}
                                 >
-                                  &times;
+                                    &times;
                                 </button>
-                              </div>
-                              <div className="lg:p-2 ">
-                                <Proceedings2024 />
-                              </div>
-                
-                              <div className="flex justify-end p-4 border-t">
-                                <button
-                                  className="bg-gray-300 text-gray-800 p-2 px-4 rounded-lg hover:bg-gray-400 cursor-pointer"
-                                  onClick={handleCloseModal}
-                                >
-                                  Close
-                                </button>
-                              </div>
                             </div>
-                          </div>
-                        )}
-                    
+                            <div className="lg:p-2 ">
+                                <Proceedings2024 />
+                            </div>
+
+                            <div className="flex justify-end p-4 border-t">
+                                <button
+                                    className="bg-gray-300 text-gray-800 p-2 px-4 rounded-lg hover:bg-gray-400 cursor-pointer"
+                                    onClick={handleCloseModal}
+                                >
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
                 <div className="max-w-[90rem] mx-auto px-4 mb-15 mt-10">
                     <h2 className="md:text-[32px] text-center text-[28px] text-white inter-bold  mb-5 scroll-mt-[120px]" id="organizing-committee">Organizing Committee </h2>
                     <div className="space-y-2">
