@@ -43,6 +43,7 @@ const Footer = () => {
                   <h4 className="lg:text-xl poppins-bold mb-2 ">Contact Info</h4>
                   <ul className="lg:text-base inter-medium text-sm space-y-2">
                     <li className='cursor-pointer'>Tehran, Iran</li>
+                    <li className='cursor-pointer'>info@ictdif.com</li>
                     <li className='cursor-pointer'>info.ictdif@gmail.com</li>
                     {/* <li><a className=" inter-medium"><Link to=''>+91 8870212121</Link></a></li> */}
                   </ul>

@@ -44,6 +44,7 @@ function Registerpage() {
                                     <div className="mb-5">
                                         <i className="fi fi-ss-clip-mail text-5xl"></i>
                                     </div>
+                                    <p className="wrap-anywhere">info@ictdif.com </p>
                                     <p className="wrap-anywhere">info.ictdif@gmail.com </p>
                                 </div>
 
