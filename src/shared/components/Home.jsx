@@ -380,7 +380,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="key-invitees" className="max-w-[1400px] mx-auto px-4 scroll-mt-[90px] pb-20">
+      <div id="key-invitees" className="max-w-[1400px] mx-auto px-4 sm:scroll-mt-[90px] scroll-mt-[140px] pb-20">
         <div className="text-center" data-aos="fade-up" data-aos-duration="500">
           <h2 className="text-[32px] text-white inter-bold inline-block relative">Key Invitees<span className="block w-4/5 h-1 bg-[#FFD900] mx-auto mt-1"></span></h2>
         </div>
